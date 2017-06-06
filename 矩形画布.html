@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>矩形</title>
+    <style type="text/css">
+        canvas {
+            border: 1px sandybrown solid;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="mycanvas" width="800px" height="800px">
+        你的浏览器不支持，请升级浏览器
+    </canvas>
+    <script>
+        var mycanvas = document.getElementById("mycanvas");
+
+        function Person(x, y, s, color) {
+            // this.a = function() {
+            //         obj.beginPath()
+            //     }
+            // obj.beginPath();
+            // obj.moveTo(x, y);
+            // obj.lineTo(x + s, y);
+            // obj.lineTo(x + s, y + s);
+            // obj.lineTo(x, y + s);
+            // obj.strokeStyle = 'transparent';
+            // obj.fillStyle = color;
+            // obj.fill();
+            // obj.stroke();
+        };
+        // Person.prototype.we = function() {
+        //     this.beginPath();
+
+        // };
+
+        // var a = content.getContext("2d");
+        // console.log(a);
+        // a = new Person();
+        // a.we();
+        context = mycanvas.getContext('2d');
+        var colors = ["red", "blue", "gray", "green"];
+        for (var i = 0; i < colors.length; i++) {
+            context.beginPath();
+            context.fillStyle = colors[i];
+            context.fillRect(i * 20 + 20, i * 20 + 20, 200, 100);
+        };
+    </script>
+
+</body>
+
+</html>
